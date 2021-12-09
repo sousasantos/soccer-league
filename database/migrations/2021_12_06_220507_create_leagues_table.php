@@ -17,9 +17,9 @@ class CreateLeaguesTable extends Migration
             $table->unsignedBigInteger('id')->primary();
 
             $table->string('name');
-            $table->unsignedBigInteger('current_season_id');
-            $table->unsignedBigInteger('current_round_id');
-            $table->unsignedBigInteger('current_stage_id');
+            $table->unsignedBigInteger('current_season_id')->nullable();
+            $table->unsignedBigInteger('current_round_id')->nullable();
+            $table->unsignedBigInteger('current_stage_id')->nullable();
 
             $table->timestamps();
         });
