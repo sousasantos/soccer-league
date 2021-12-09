@@ -16,7 +16,6 @@ class CreateLeaguesTable extends Migration
         Schema::create('leagues', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
 
-            $table->foreignId('season_id')->constrained();
             $table->string('name');
             $table->unsignedBigInteger('current_season_id');
             $table->unsignedBigInteger('current_round_id');

@@ -15,6 +15,8 @@ class CreateSeasonsTable extends Migration
     {
         Schema::create('seasons', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
+            
+            $table->foreignId('league_id')->constrained();
             $table->string('name');
             $table->boolean('is_current_season');
 
