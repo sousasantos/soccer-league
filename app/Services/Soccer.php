@@ -31,13 +31,28 @@ class Soccer
     }
 
     /**
-     * return standings by seasons
+     * return teams by season with players
+     *
+     * @param integer $team_id
+     * 
+     * @return array
+     */
+    public function getTeamsBySeason(int $season_id):array
+    {
+        return $this->request(
+            'teams/seasons/' . $season_id,
+            'squad.player.position'
+        )->json();
+    }
+
+    /**
+     * return stages by seasons
      *
      * @param integer $season_id
      * 
      * @return array
      */
-    public function getStandingsBySeason(int $season_id):array
+    public function getStagesBySeason(int $season_id):array
     {
         return $this->request(
             'standings/season/' . $season_id
