@@ -9,7 +9,6 @@ class StandingRepository
 {
     public function create(Stage $stage, array $standing)
     {
-        /** FIXME: seasons standings can have groups */
             return isset($standing['position']) ? $stage->standings()->create([
                 'position' => $standing['position'],
                 'team_id' => $standing['team_id'],
