@@ -9,6 +9,7 @@ class Team extends Model
     public $incrementing = false;
     
     protected $fillable = [
+        'id',
         'name',
         'logo_path'
     ];

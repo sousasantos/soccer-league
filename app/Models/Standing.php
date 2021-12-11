@@ -11,6 +11,7 @@ class Standing extends Model
         'team_id',
         'team_name',
         'stage_id',
+        'group_id',
         'games_played',
         'won',
         'draw',

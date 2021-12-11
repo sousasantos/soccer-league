@@ -16,11 +16,14 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->unsignedBigInteger('id')->primary();
 
-            $table->foreignId('team_id')->constrained();
-            $table->string('first_name');
-            $table->string('last_name');
-            $table->string('display_name');
-            $table->string('position');
+            $table->foreignId('team_id')->constrained()->onDelete('cascade');
+            $table->integer('number')->nullable();
+            $table->string('display_name')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->text('image_path')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('position')->nullable();
             $table->timestamps();
         });
     }

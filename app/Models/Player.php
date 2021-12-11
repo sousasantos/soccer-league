@@ -9,10 +9,14 @@ class Player extends Model
     public $incrementing = false;
     
     protected $fillable = [
-        'name',
+        'id',
+        'team_id',
+        'number',
+        'display_name',
         'first_name',
         'last_name',
-        'display_name',
+        'image_path',
+        'nationality',
         'position'
     ];
 

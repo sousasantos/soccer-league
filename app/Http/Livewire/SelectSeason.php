@@ -21,6 +21,7 @@ class SelectSeason extends Component
 
     public function leagueChanged($league_id)
     {
+        $this->season_id = 0;
         $this->league = League::findOrNew($league_id);
     }
 

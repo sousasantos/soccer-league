@@ -18,8 +18,9 @@ class CreateStandingsTable extends Migration
 
             $table->bigInteger(('position'));
             $table->unsignedBigInteger('team_id');
+            $table->unsignedBigInteger('group_id')->nullable();
             $table->string('team_name');
-            $table->foreignId('stage_id')->constrained();
+            $table->foreignId('stage_id')->constrained()->onDelete('cascade');
 
             $table->integer('games_played');
             $table->integer('won');

@@ -1,9 +1,13 @@
 <div>
   <select
+    class="form-select"
     wire:model="league_id"
     name="leagues"
   >
-  <option value="0">Select League</option>
+  <option 
+    selected
+    value="0"
+  >Select League</option>
     @foreach ($leagues as $league)
       <option
         value="{{ $league->id }}"

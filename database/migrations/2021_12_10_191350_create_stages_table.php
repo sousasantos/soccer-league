@@ -17,9 +17,10 @@ class CreateStagesTable extends Migration
             $table->unsignedBigInteger('id')->primary();
             $table->string('name');
             $table->string('type');
+            $table->unsignedBigInteger('round_id')->nullable();
 
-            $table->foreignId('league_id')->constrained();
-            $table->foreignId('season_id')->constrained();
+            $table->foreignId('league_id')->constrained()->onDelete('cascade');
+            $table->foreignId('season_id')->constrained()->onDelete('cascade');
             
             $table->timestamps();
         });
