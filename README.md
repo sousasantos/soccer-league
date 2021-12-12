@@ -1,5 +1,11 @@
-<a href="#tada-php-support" title="PHP Versions Supported"><img alt="PHP Versions Supported" src="https://img.shields.io/badge/php-5.3%20to%208.2-777bb3.svg?logo=php&logoColor=white&labelColor=555555"></a>
 # Guia Utilização
+
+## ficheiro .env
+```
+cp .env.example .env
+
+php artisan key:generate
+```
 
 ## credenciais API
 colocar credenciais API no ficheiro **.env**

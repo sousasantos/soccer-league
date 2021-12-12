@@ -4,10 +4,6 @@ namespace App\Services;
 
 use App\Models\League;
 use App\Models\Season;
-use App\Models\Stage;
-use App\Models\Standing;
-use App\Models\Team;
-use Illuminate\Support\Arr;
 
 class SyncApi
 {
@@ -31,15 +27,5 @@ class SyncApi
         }, ARRAY_FILTER_USE_BOTH);
 
         return League::updateOrCreate(['id' => $filterLeague['id']], $filterLeague);
-    }
-
-    public function teams(array $teams)
-    {
-        return Team::createMany($teams);
-    }
-
-    public function players(Team $team, array $players)
-    {
-        return $team->players()->createMany($players);
     }
 }
