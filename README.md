@@ -1,3 +1,4 @@
+<a href="#tada-php-support" title="PHP Versions Supported"><img alt="PHP Versions Supported" src="https://img.shields.io/badge/php-5.3%20to%208.2-777bb3.svg?logo=php&logoColor=white&labelColor=555555"></a>
 # Guia Utilização
 
 ## credenciais API
